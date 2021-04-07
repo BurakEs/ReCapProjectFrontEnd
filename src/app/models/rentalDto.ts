@@ -1,5 +1,5 @@
 export interface RentalDto{
-    id:number;
+    rentalId:number;
     carId:number;
     custmerId:number;
     carName:string;

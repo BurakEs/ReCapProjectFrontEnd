@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-navi',
   templateUrl: './navi.component.html',
@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NaviComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
 
+  isHomePage(){
+    return this.router.url=="" || this.router.url =="/" ? true :false;
+  }
 }
